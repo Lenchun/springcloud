@@ -1,0 +1,10 @@
+#使用服务ID配置路由网关
+zuul:
+  routes:
+    first:
+      path: /api-ribbon/**
+      serviceId: service-ribbon
+    second:
+      path: /api-feign/**
+      serviceId: service-feign
+  #ignored-patterns: /**/hello/**  #配置忽略表达式
